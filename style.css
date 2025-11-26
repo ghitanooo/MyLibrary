@@ -180,3 +180,65 @@ body {
   from { opacity: 0; transform: scale(0.98); }
   to { opacity: 1; transform: scale(1); }
 }
+
+/* === BOUTON MODE JOUR / NUIT === */
+.mode-button {
+    position: fixed;
+    top: 20px;      
+    left: 25px;      
+    font-size: 30px;
+    background: none;
+    border: none;
+    cursor: pointer;
+    z-index: 10;
+    transition: transform 0.2s ease;
+}
+
+
+.mode-button:hover {
+    transform: scale(1.2);
+}
+
+/* Effet doux de transition entre les deux backgrounds */
+body, .library {
+    transition: background-color 0.6s ease, background-image 0.6s ease;
+}
+
+/* === MODALE CONTACT === */
+.contact-wrapper {
+  position: relative;
+  display: inline-block;
+}
+
+.contact-image {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+/* Zones cliquables transparentes */
+.contact-link {
+  position: absolute;
+  display: block;
+  cursor: pointer;
+}
+
+/* === Ajuste ici les coordonnées === */
+/* LinkedIn (à gauche de l'enveloppe) */
+.linkedin {
+  top: 29%;
+  left: 39%;
+  width: 7%;
+  height: 10%;
+  transform: translate(-50%, -50%);
+}
+
+/* Email (l'enveloppe à droite) */
+.email {
+  top: 29%;
+  left: 50%;
+  width: 7%;
+  height: 15%;
+  transform: translate(-50%, -50%);
+}
+

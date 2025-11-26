@@ -17,6 +17,7 @@
   <div class="library">
     <img src="images/background.png" class="background" alt="background">
 
+
     <!-- Objets interactifs -->
     <img src="images/skills.png" class="item" id="skills" alt="skills"
          data-modal="modal-skills" data-info="Skills">
@@ -82,12 +83,24 @@
     </div>
   </div>
 
-  <div id="modal-contacts" class="modal">
-    <div class="modal-content">
-      <span class="close">&times;</span>
-      <img src="images/modale_contact.png" alt="Contacts" class="modal-image">
+  <!-- === Modale Contact === -->
+<div id="modal-contacts" class="modal">
+  <div class="modal-content contact-modal">
+    <span class="close">&times;</span>
+    <div class="contact-wrapper">
+      <img src="images/modale_contact.png" alt="Contact" class="contact-image">
+
+      <!-- Liens superposés -->
+      <a href="https://www.linkedin.com/in/ghita-lahbabi-0134b2231" 
+         target="_blank" 
+         class="contact-link linkedin"></a>
+
+      <a href="mailto:ghitalhb864@gmail.com" 
+         class="contact-link email"></a>
     </div>
   </div>
+</div>
+
 
  <!-- === Modale Galerie Photos === -->
 <div id="modal-gallery" class="modal">
@@ -104,6 +117,8 @@
   </div>
 </div>
 
+<!-- Bouton pour changer le mode -->
+<button id="mode-toggle" class="mode-button">🌙</button>
 
   <script src="script.js"></script>
 </body>

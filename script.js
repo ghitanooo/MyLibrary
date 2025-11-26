@@ -106,3 +106,24 @@ window.addEventListener('click', e => {
   if (e.target === galleryModal) galleryModal.style.display = 'none';
 });
 
+
+
+// === BOUTON MODE JOUR / NUIT ===
+const toggleButton = document.getElementById("mode-toggle");
+const background = document.querySelector(".background");
+
+let darkMode = false;
+
+toggleButton.addEventListener("click", () => {
+  darkMode = !darkMode;
+
+  if (darkMode) {
+    // passe au mode nuit
+    background.src = "images/background_dark.png";
+    toggleButton.textContent = "☀️"; // change l’emoji
+  } else {
+    // repasse au mode jour
+    background.src = "images/background.png";
+    toggleButton.textContent = "🌙";
+  }
+});
