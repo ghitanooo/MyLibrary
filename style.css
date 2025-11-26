@@ -26,10 +26,18 @@ body {
 /* Objets interactifs */
 .item {
   position: absolute;
-  width: 1100px;
+  width: 200px;
+
   cursor: pointer;
   transition: transform 0.3s ease;
   z-index: 2;
+}
+.item {
+  pointer-events: auto;
+}
+
+.item img {
+  pointer-events: none;
 }
 
 .item:hover {
@@ -37,14 +45,14 @@ body {
 }
 
 /* Placement précis des objets */
-#skills { top: 10px; left: 750px; }        
-#education { bottom: 260px; left: 750px; }    
-#experience { top: 50px; left: 380px; }    
-#contacts { top: 340px; left: 380px; }     
-#cv { top: 330px; left: 750px; }            
-#photos { top: 340px; left: 550px; }       
-#projets { top: 60px; right: 520px; }       
-#github { top: 600px; left: 1220px; width: 70px; } 
+#skills { bottom: 520px; left: 1150px; }        
+#education { top: 330px; left: 1100px; }    
+#experience { top: 290px; left: 810px; }    
+#contacts { top: 580px; left: 800px; }     
+#cv { top: 530px; left: 1180px; }            
+#photos { top: 590px; left: 1030px; width: 150px; }       
+#projets { top: 240px; right: 970px; }       
+#github { top: 95px; left: 840px; width: 250px; } 
 
 /* Popup */
 .popup {
