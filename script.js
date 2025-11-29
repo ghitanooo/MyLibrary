@@ -3,7 +3,6 @@ const popup = document.getElementById('popup');
 const modals = document.querySelectorAll('.modal');
 const closeBtns = document.querySelectorAll('.close');
 
-// === Texte au survol ===
 items.forEach(item => {
   item.addEventListener('mouseenter', e => {
     const info = item.dataset.info;
@@ -24,7 +23,6 @@ items.forEach(item => {
     popup.style.display = 'none';
   });
 
-  // === Ouverture de la modale ===
   item.addEventListener('click', () => {
     if (['cv', 'github', 'photos'].includes(item.id)) return;
     const modalId = item.dataset.modal;
@@ -32,7 +30,6 @@ items.forEach(item => {
   });
 });
 
-// === Fermeture modales ===
 closeBtns.forEach(btn => {
   btn.addEventListener('click', () => {
     btn.closest('.modal').style.display = 'none';
@@ -45,13 +42,11 @@ window.addEventListener('click', e => {
   });
 });
 
-// === Galerie Photos ===
 const galleryModal = document.getElementById('modal-gallery');
 const galleryGrid = document.querySelector('.gallery-grid');
 const photoViewer = document.getElementById('photo-viewer');
 const photoViewerImg = document.getElementById('photo-viewer-img');
 
-// tableau des chemins des photos
 const galleryPhotos = [
   'photographie/1.jpg', 'photographie/2.jpg', 'photographie/3.jpg',
   'photographie/4.jpg', 'photographie/5.jpg', 'photographie/6.jpg',
@@ -63,7 +58,6 @@ const galleryPhotos = [
   'photographie/22.jpg', 'photographie/23.jpg', 'photographie/24.jpg', 
 ];
 
-// génération auto des miniatures
 function createGallery() {
   galleryGrid.innerHTML = '';
   galleryPhotos.forEach(src => {
@@ -84,31 +78,26 @@ function closePhotoViewer() {
   photoViewer.classList.remove('show');
 }
 
-// clic caméra → ouvre la galerie
 document.getElementById('photos').addEventListener('click', () => {
   createGallery();
   galleryModal.style.display = 'block';
 });
 
-// ferme la modale principale
 galleryModal.querySelector('.close').addEventListener('click', () => {
   galleryModal.style.display = 'none';
   closePhotoViewer();
 });
 
-// ferme la photo agrandie en cliquant à l’extérieur
 photoViewer.addEventListener('click', e => {
   if (e.target === photoViewer) closePhotoViewer();
 });
 
-// ferme tout si clic hors modale
 window.addEventListener('click', e => {
   if (e.target === galleryModal) galleryModal.style.display = 'none';
 });
 
 
 
-// === BOUTON MODE JOUR / NUIT ===
 const toggleButton = document.getElementById("mode-toggle");
 const background = document.querySelector(".background");
 
@@ -118,24 +107,19 @@ toggleButton.addEventListener("click", () => {
   darkMode = !darkMode;
 
   if (darkMode) {
-    // passe au mode nuit
     background.src = "images/background_dark.png";
-    toggleButton.textContent = "☀️"; // change l’emoji
+    toggleButton.textContent = "☀️"; 
   } else {
-    // repasse au mode jour
     background.src = "images/background.png";
     toggleButton.textContent = "🌙";
   }
 });
 
-// === GESTION MUSIQUE ===
 const musicButton = document.getElementById("music-toggle");
 const music = document.getElementById("background-music");
 let musicPlaying = false;
 
-// Fonction pour démarrer la musique
 function startMusic() {
-  // Essaye de jouer la musique
   const playPromise = music.play();
 
   if (playPromise !== undefined) {
@@ -145,19 +129,16 @@ function startMusic() {
         musicButton.textContent = "🔊";
       })
       .catch((error) => {
-        // si le navigateur bloque l'autoplay
         console.log("Lecture automatique bloquée, démarrage manuel requis :", error);
       });
   }
 }
 
-// Lance automatiquement à l'arrivée sur la page
 window.addEventListener("load", () => {
-  music.volume = 0.5; // volume initial doux
+  music.volume = 0.5; 
   startMusic();
 });
 
-// Clique = toggle on/off
 musicButton.addEventListener("click", () => {
   if (musicPlaying) {
     music.pause();

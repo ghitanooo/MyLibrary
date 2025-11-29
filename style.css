@@ -30,17 +30,16 @@ body {
   transform: scale(1.15);
 }
 
-/* === POSITIONS EXACTES QUE TU AVAIS FOURNIES === */
-#skills { bottom: 520px; left: 1150px; }        
-#education { top: 330px; left: 1100px; }    
-#experience { top: 290px; left: 810px; }    
-#contacts { top: 580px; left: 800px; }     
-#cv { top: 530px; left: 1180px; }            
-#photos { top: 590px; left: 1030px; width: 150px; }       
-#projets { top: 240px; right: 970px; }       
-#github { top: 95px; left: 840px; width: 250px; } 
+#skills { bottom: 71%; left: 83%; width: 12.4vw; }        
+#education { top: 45%; left: 80%; width: 13.4vw; }    
+#experience { top: 39%; left: 57%; width: 13.4vw; }    
+#contacts { top: 78%; left: 57%; width: 13.4vw; }     
+#cv { top: 70%; left: 84%; width: 14.4vw; }            
+#photos { top: 81%; left: 73%; width: 8.8vw; }       
+#projets { top: 32%; left: 18%; width: 14.4vw; }       
+#github { top: 12%; left: 58%; width: 17.8vw; }
 
-/* === TEXTE HOVER === */
+
 .popup {
   position: absolute;
   display: none;
@@ -56,7 +55,6 @@ body {
 }
 
 
-/* === MODALES === */
 .modal {
   display: none;
   position: fixed;
@@ -70,7 +68,6 @@ body {
   animation: fadeInOverlay 0.3s ease;
 }
 
-/* contenu centré */
 .modal-content {
   display: flex;
   justify-content: center;
@@ -83,7 +80,6 @@ body {
   border: none;
 }
 
-/* image modale */
 .modal-image {
   width: 100%;
   max-width: 700px;
@@ -91,7 +87,6 @@ body {
   animation: modalFadeIn 0.4s ease;
 }
 
-/* croix fermeture */
 .close {
   position: absolute;
   top: 20px;
@@ -107,7 +102,6 @@ body {
   color: #ffbfbf;
 }
 
-/* === ANIMATIONS === */
 @keyframes modalFadeIn {
   from {
     opacity: 0;
@@ -124,7 +118,6 @@ body {
   to { opacity: 1; }
 }
 
-/* === Galerie photos === */
 .gallery-content {
   display: flex;
   flex-direction: column;
@@ -159,7 +152,6 @@ body {
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
 }
 
-/* === Vue agrandie === */
 .photo-viewer {
   display: none;
   position: fixed;
@@ -187,7 +179,6 @@ body {
   to { opacity: 1; transform: scale(1); }
 }
 
-/* === BOUTON MODE JOUR / NUIT === */
 .mode-button {
     position: fixed;
     top: 20px;      
@@ -199,10 +190,9 @@ body {
     z-index: 10;
     transition: transform 0.2s ease;
 }
-/* === BOUTON MUSIQUE === */
 .music-button {
     position: fixed;
-    top: 65px;          /* juste sous le bouton lune/soleil */
+    top: 65px;        
     left: 28px;
     font-size: 26px;
     background: none;
@@ -222,26 +212,21 @@ body {
     transform: scale(1.2);
 }
 
-/* Effet doux de transition entre les deux backgrounds */
 body, .library {
     transition: background-color 0.6s ease, background-image 0.6s ease;
 }
 
-/* === MODALE CONTACT === */
 .contact-wrapper {
   position: relative;
   display: inline-block;
 }
 
-/* Zones cliquables transparentes */
 .contact-link {
   position: absolute;
   display: block;
   cursor: pointer;
 }
 
-/* === Ajuste ici les coordonnées === */
-/* LinkedIn (à gauche de l'enveloppe) */
 .linkedin {
   top: 29%;
   left: 39%;
@@ -250,7 +235,6 @@ body, .library {
   transform: translate(-50%, -50%);
 }
 
-/* Email (l'enveloppe à droite) */
 .email {
   top: 29%;
   left: 50%;

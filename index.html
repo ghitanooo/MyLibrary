@@ -5,7 +5,6 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Ghita’s Library</title>
 
-  <!-- Police pour popup texte -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Caveat+Brush&display=swap" rel="stylesheet">
@@ -18,7 +17,6 @@
     <img src="images/background.png" class="background" alt="background">
 
 
-    <!-- Objets interactifs -->
     <img src="images/skills.png" class="item" id="skills" alt="skills"
          data-modal="modal-skills" data-info="Skills">
 
@@ -31,30 +29,24 @@
     <img src="images/experience.png" class="item" id="experience" alt="experience"
          data-modal="modal-experience" data-info="Experience">
 
-    <!-- CV (téléchargement direct) -->
     <a href="CV_Ghita_en.pdf" download>
       <img src="images/CV.png" class="item" id="cv" alt="cv"
            data-info="My Resume">
     </a>
 
-    <!-- Photos (sera ajouté plus tard) -->
     <img src="images/photos.png" class="item" id="photos" alt="photos"
          data-info="Check out some of my photos">
 
-    <!-- Contacts -->
     <img src="images/contacts.png" class="item" id="contacts" alt="contacts"
          data-modal="modal-contacts" data-info="Contact me!">
 
-    <!-- GitHub -->
     <a href="https://github.com/ghitanooo" target="_blank" rel="noopener noreferrer">
       <img src="images/github.png" class="item" id="github" alt="GitHub" data-info="My GitHub">
     </a>
 
-    <!-- Popup texte au survol -->
     <div id="popup" class="popup"></div>
   </div>
 
-  <!-- Modales personnalisées avec images -->
   <div id="modal-skills" class="modal">
     <div class="modal-content">
       <span class="close">&times;</span>
@@ -83,14 +75,12 @@
     </div>
   </div>
 
-  <!-- === Modale Contact === -->
 <div id="modal-contacts" class="modal">
   <div class="modal-content contact-modal">
     <span class="close">&times;</span>
     <div class="contact-wrapper">
       <img src="images/modale_contact.png" alt="Contact" class="contact-image">
 
-      <!-- Liens superposés -->
       <a href="https://www.linkedin.com/in/ghita-lahbabi-0134b2231" 
          target="_blank" 
          class="contact-link linkedin"></a>
@@ -102,13 +92,11 @@
 </div>
 
 
- <!-- === Modale Galerie Photos === -->
 <div id="modal-gallery" class="modal">
   <div class="modal-content gallery-content">
     <span class="close">&times;</span>
 
     <div class="gallery-grid">
-      <!-- Les miniatures seront générées automatiquement via JS -->
     </div>
 
     <div class="photo-viewer" id="photo-viewer">
@@ -117,13 +105,10 @@
   </div>
 </div>
 
-<!-- Bouton pour changer le mode -->
 <button id="mode-toggle" class="mode-button">🌙</button>
 
-<!-- Bouton musique -->
 <button id="music-toggle" class="music-button">🔊</button>
 
-<!-- Fichier audio -->
 <audio id="background-music" loop>
   <source src="audio/background.mp3" type="audio/mpeg">
 </audio>
